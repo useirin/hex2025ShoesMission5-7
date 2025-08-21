@@ -1,0 +1,13 @@
+$utilities: map-merge(
+  $utilities,
+  (
+    // 文字尺寸增加響應式
+    "font-size":
+      map-merge(
+        map-get($utilities, "font-size"),
+        (
+          responsive: true,
+        )
+      )
+  )
+);
