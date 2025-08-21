@@ -4,13 +4,118 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>會員中心｜職旅 Workway</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <%- include('./layout/headerMember'); -%>
 
-    <h1>我是會員中心</h1>
+    <main class="bg-natural-95">
+      <div class="container py-12 py-lg-20">
+        <div class="row">
+          <div class="col-10 mx-auto">
+            <ul
+              class="nav nav-pills justify-content-center mb-3"
+              id="pills-tab"
+              role="tablist"
+            >
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link text-black border p-3 px-lg-5 active"
+                  id="pills-profile-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-profile"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-profile"
+                  aria-selected="true"
+                >
+                  <span class="material-symbols-outlined align-bottom">
+                    face
+                  </span>
+                  <span class="ms-lg-1">個人資料</span>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link text-black border p-3 px-lg-5 ms-4 ms-lg-6"
+                  id="pills-appointment-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-appointment"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-appointment"
+                  aria-selected="false"
+                >
+                  <span class="material-symbols-outlined align-bottom">
+                    pending_actions
+                  </span>
+                  <span class="ms-lg-1">預約紀錄</span>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link text-black border p-3 px-lg-5 ms-4 ms-lg-6"
+                  id="pills-plan-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-plan"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-plan"
+                  aria-selected="false"
+                >
+                  <span class="material-symbols-outlined align-bottom">
+                    list_alt
+                  </span>
+                  <span class="ms-lg-1">職旅計劃</span>
+                </button>
+              </li>
+            </ul>
+            <div
+              class="tab-content bg-light shadow rounded-4 p-6 p-lg-12"
+              id="pills-tabContent"
+            >
+              <div
+                class="tab-pane fade show active"
+                id="pills-profile"
+                role="tabpanel"
+                aria-labelledby="pills-profile-tab"
+              >
+                <form action="" class="d-lg-flex">
+                  <legend class="fs-t1 fs-lg-t2 fw-medium">個人資料</legend>
+                  <section></section>
+                </form>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="pills-appointment"
+                role="tabpanel"
+                aria-labelledby="pills-appointment-tab"
+              >
+                預約紀錄
+              </div>
+              <div
+                class="tab-pane fade"
+                id="pills-plan"
+                role="tabpanel"
+                aria-labelledby="pills-plan-tab"
+              >
+                職旅計劃
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
-    <!-- <%- include('./layout/footer'); -%> -->
+    <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
   </body>
