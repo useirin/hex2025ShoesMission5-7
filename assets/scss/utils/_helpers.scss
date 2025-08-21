@@ -1,0 +1,12 @@
+// debug 用
+// * {
+//   outline: 1px solid green;
+// }
+
+.break-line {
+  display: block;
+
+  @include media-breakpoint-up(sm) {
+    display: none;
+  }
+}

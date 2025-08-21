@@ -1,0 +1,21 @@
+.nav-link:hover {
+  background: $natural-90;
+  border-radius: $border-radius-lg;
+}
+
+.navbar-toggler {
+  padding: 10px;
+
+  &-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.navbar .btn-lg,
+.btn-group-lg > .btn {
+  @include media-breakpoint-up(lg) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
