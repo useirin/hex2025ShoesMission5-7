@@ -12,9 +12,11 @@
 @import "./base/base";
 
 // customize - components
+@import "./components/nav";
 @import "./components/navbar";
 @import "./components/offcanvas";
 @import "./components/buttons";
+@import "./components/form";
 
 // customize - utils
 @import "./utils/helpers";

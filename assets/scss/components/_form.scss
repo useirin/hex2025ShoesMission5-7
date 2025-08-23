@@ -1,0 +1,14 @@
+legend {
+  font-size: 1rem;
+}
+
+.form-floating {
+  > label {
+    color: $natural-50;
+  }
+
+  > input:placeholder-shown:not(:focus) ~ label,
+  > textarea:placeholder-shown:not(:focus) ~ label {
+    color: $black;
+  }
+}

@@ -1,3 +1,11 @@
 body {
   letter-spacing: calc(2 / 100 * 1rem);
 }
+
+small {
+  display: inline-block;
+}
+
+.material-symbols-outlined {
+  vertical-align: bottom;
+}

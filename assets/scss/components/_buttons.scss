@@ -1,3 +1,18 @@
+// 底色按鈕
+.btn-dark {
+  &:hover {
+    background: $secondary-50;
+    color: $black;
+    --bs-btn-hover-border-color: transparent;
+  }
+}
+
+// 框線按鈕
+.btn-outline-natural-85 {
+  color: $black;
+}
+
+// 大按鈕
 .btn-secondary {
   &:hover {
     background: $primary-60;

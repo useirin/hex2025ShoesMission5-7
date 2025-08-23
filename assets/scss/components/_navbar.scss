@@ -9,11 +9,6 @@
   --#{$prefix}navbar-toggler-focus-width: 0;
 }
 
-// memberCenter-pill
-// .nav-pills .nav-link {
-//   background: $light;
-// }
-
 .navbar-brand {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -45,9 +40,16 @@
   }
 }
 
+// 按鈕尺寸 RWD
 .navbar .btn-lg,
 .btn-group-lg > .btn {
   @include media-breakpoint-up(lg) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+.footer .nav-link {
+  @include media-breakpoint-up(xl) {
     padding-left: 24px;
     padding-right: 24px;
   }
