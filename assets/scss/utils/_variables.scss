@@ -1144,8 +1144,10 @@ $input-group-addon-border-color: $input-border-color !default;
 // scss-docs-end input-group-variables
 
 // scss-docs-start form-select-variables
-$form-select-padding-y: $input-padding-y !default;
-$form-select-padding-x: $input-padding-x !default;
+$form-select-padding-y: 1rem; // 自訂
+$form-select-padding-x: 0.75rem; // 自訂
+// $form-select-padding-y: $input-padding-y !default;
+// $form-select-padding-x: $input-padding-x !default;
 $form-select-font-family: $input-font-family !default;
 $form-select-font-size: $input-font-size !default;
 $form-select-indicator-padding: $form-select-padding-x * 3 !default; // Extra padding for background-image
@@ -1423,15 +1425,19 @@ $dropdown-box-shadow: var(--#{$prefix}box-shadow) !default;
 
 $dropdown-link-color: var(--#{$prefix}body-color) !default;
 $dropdown-link-hover-color: $dropdown-link-color !default;
-$dropdown-link-hover-bg: var(--#{$prefix}tertiary-bg) !default;
+$dropdown-link-hover-bg: $natural-90; // 自訂
+// $dropdown-link-hover-bg: var(--#{$prefix}tertiary-bg) !default;
 
 $dropdown-link-active-color: $component-active-color !default;
-$dropdown-link-active-bg: $component-active-bg !default;
+$dropdown-link-active-bg: $natural-90; // 自訂
+// $dropdown-link-active-bg: $component-active-bg !default;
 
 $dropdown-link-disabled-color: var(--#{$prefix}tertiary-color) !default;
 
-$dropdown-item-padding-y: $spacer * 0.25 !default;
-$dropdown-item-padding-x: $spacer !default;
+$dropdown-item-padding-y: $spacer * 0.5;
+$dropdown-item-padding-x: $spacer * 1.5;
+// $dropdown-item-padding-y: $spacer * 0.25 !default;
+// $dropdown-item-padding-x: $spacer !default;
 
 $dropdown-header-color: $gray-600 !default;
 $dropdown-header-padding-x: $dropdown-item-padding-x !default;
@@ -1669,7 +1675,8 @@ $toast-header-border-color: $toast-border-color !default;
 // Badges
 
 // scss-docs-start badge-variables
-$badge-font-size: 0.75em !default;
+$badge-font-size: 0.875em !default; // 自訂
+// $badge-font-size: 0.75em !default;
 $badge-font-weight: $font-weight-bold !default;
 $badge-color: $white !default;
 $badge-padding-y: 0.35em !default;

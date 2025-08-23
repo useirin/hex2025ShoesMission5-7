@@ -10,3 +10,9 @@
     display: none;
   }
 }
+
+.col-lg-300 {
+  @include media-breakpoint-up(lg) {
+    min-width: 300px;
+  }
+}
