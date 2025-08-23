@@ -1,0 +1,15 @@
+.offcanvas-header {
+  padding-bottom: 1rem;
+
+  .btn-close {
+    padding: 15px;
+    // Split properties to avoid invalid calc() function if value is 0
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+}
+
+.offcanvas-body {
+  padding-top: 0;
+}

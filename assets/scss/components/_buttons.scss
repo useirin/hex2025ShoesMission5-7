@@ -1,0 +1,7 @@
+.btn-secondary {
+  &:hover {
+    background: $primary-60;
+    color: $light;
+    --bs-btn-hover-border-color: transparent;
+  }
+}

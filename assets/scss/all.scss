@@ -8,8 +8,13 @@
 @import "./utils/utilities";
 @import "bootstrap/scss/utilities/api";
 
+// customize - base
+@import "./base/base";
+
 // customize - components
 @import "./components/navbar";
+@import "./components/offcanvas";
+@import "./components/buttons";
 
 // customize - utils
 @import "./utils/helpers";

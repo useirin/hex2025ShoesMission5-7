@@ -1,14 +1,47 @@
+// 變數
+.navbar {
+  --#{$prefix}navbar-color: $black;
+  --#{$prefix}navbar-nav-link-padding-x: 1.5rem;
+  --#{$prefix}navbar-toggler-padding-y: 10px;
+  --#{$prefix}navbar-toggler-padding-x: 10px;
+
+  --#{$prefix}navbar-toggler-border-radius: $border-radius-xl;
+  --#{$prefix}navbar-toggler-focus-width: 0;
+}
+
+// memberCenter-pill
+// .nav-pills .nav-link {
+//   background: $light;
+// }
+
+.navbar-brand {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 .nav-link:hover {
   background: $natural-90;
+}
+
+.navbar-expand-lg .nav-link,
+.footer .nav-link {
   border-radius: $border-radius-lg;
 }
 
+// 漢堡選單
 .navbar-toggler {
-  padding: 10px;
+  border: 0;
 
   &-icon {
     width: 24px;
     height: 24px;
+  }
+  &:hover {
+    background: $natural-90;
+  }
+
+  &:focus {
+    background: $natural-90;
   }
 }
 

@@ -518,7 +518,8 @@ $position-values: (
 // Settings for the `<body>` element.
 
 $body-text-align: null !default;
-$body-color: $gray-900 !default;
+$body-color: $black; // 自訂
+// $body-color: $gray-900 !default;
 $body-bg: $white !default;
 
 $body-secondary-color: rgba($body-color, 0.75) !default;
@@ -642,7 +643,8 @@ $border-radius-2xl: $border-radius-xxl !default; // Deprecated in v5.3.0
 // fusv-enable
 
 // scss-docs-start box-shadow-variables
-$box-shadow: 0 0.5rem 1rem rgba($black, 0.15) !default;
+$box-shadow: 0 0rem 1rem rgba(#000, 0.12); // 自訂
+// $box-shadow: 0 0.5rem 1rem rgba($black, 0.15) !default;
 $box-shadow-sm: 0 0.125rem 0.25rem rgba($black, 0.075) !default;
 $box-shadow-lg: 0 1rem 3rem rgba($black, 0.175) !default;
 $box-shadow-inset: inset 0 1px 2px rgba($black, 0.075) !default;
@@ -690,10 +692,10 @@ $aspect-ratios: (
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
 
-$font-family-sans-serif: "Noto Sans", system-ui, -apple-system, "Segoe UI",
-  Roboto, "Helvetica Neue", "Liberation Sans", Arial, sans-serif,
+$font-family-sans-serif: Inter, "Noto Sans", system-ui, -apple-system,
+  "Segoe UI", Roboto, "Helvetica Neue", "Liberation Sans", Arial, sans-serif,
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-// 自訂
+// 自訂中英文字體
 
 // $font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
@@ -734,23 +736,24 @@ $h6-font-size: $font-size-base !default;
 
 // scss-docs-start font-sizes
 $font-sizes: (
-  "d": $font-size-base * 3,
-  "t5": $font-size-base * 2,
-  "t4": $font-size-base * 1.75,
-  "t3": $font-size-base * 1.5,
-  "t2": $font-size-base * 1.25,
-  "t1": $font-size-base * 1.125,
-  "bl": $font-size-base * 1,
-  "bm": $font-size-base * 0.875,
+  // 自訂桌面版文字尺寸
+  "d": $font-size-base * 5,
+  "t5": $font-size-base * 3,
+  "t4": $font-size-base * 2,
+  "t3": $font-size-base * 1.75,
+  "t2": $font-size-base * 1.5,
+  "t1": $font-size-base * 1.25,
+  "bl": $font-size-base * 1.125,
+  "bm": $font-size-base * 1,
   "bs": $font-size-base * 0.875,
-  "bx": $font-size-base * 0.75,
+  "xs": $font-size-base * 0.75,
 
   1: $h1-font-size,
   2: $h2-font-size,
   3: $h3-font-size,
   4: $h4-font-size,
   5: $h5-font-size,
-  6: $h6-font-size,
+  6: $h6-font-size
 ) !default;
 // scss-docs-end font-sizes
 
@@ -1320,8 +1323,10 @@ $nav-tabs-link-active-border-color: var(--#{$prefix}border-color)
   var(--#{$prefix}border-color) $nav-tabs-link-active-bg !default;
 
 $nav-pills-border-radius: var(--#{$prefix}border-radius) !default;
-$nav-pills-link-active-color: $component-active-color !default;
-$nav-pills-link-active-bg: $component-active-bg !default;
+$nav-pills-link-active-color: $black; // 自訂
+$nav-pills-link-active-bg: $natural-90; // 自訂
+// $nav-pills-link-active-color: $component-active-color !default;
+// $nav-pills-link-active-bg: $component-active-bg !default;
 
 $nav-underline-gap: 1rem !default;
 $nav-underline-border-width: 0.125rem !default;
@@ -1872,9 +1877,12 @@ $btn-close-padding-y: $btn-close-padding-x !default;
 $btn-close-color: $black !default;
 $btn-close-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>") !default;
 $btn-close-focus-shadow: $focus-ring-box-shadow !default;
-$btn-close-opacity: 0.5 !default;
-$btn-close-hover-opacity: 0.75 !default;
-$btn-close-focus-opacity: 1 !default;
+$btn-close-opacity: 1; // 自訂
+$btn-close-hover-opacity: 0.5; // 自訂
+$btn-close-focus-opacity: 0.75; // 自訂
+// $btn-close-opacity: 0.5 !default;
+// $btn-close-hover-opacity: 0.75 !default;
+// $btn-close-focus-opacity: 1 !default;
 $btn-close-disabled-opacity: 0.25 !default;
 $btn-close-white-filter: invert(1) grayscale(100%) brightness(200%) !default;
 // scss-docs-end close-variables
@@ -1882,10 +1890,13 @@ $btn-close-white-filter: invert(1) grayscale(100%) brightness(200%) !default;
 // Offcanvas
 
 // scss-docs-start offcanvas-variables
-$offcanvas-padding-y: $modal-inner-padding !default;
-$offcanvas-padding-x: $modal-inner-padding !default;
+$offcanvas-padding-y: 1.5rem; // 自訂
+$offcanvas-padding-x: 1.5rem; // 自訂
+// $offcanvas-padding-y: $modal-inner-padding !default;
+// $offcanvas-padding-x: $modal-inner-padding !default;
 $offcanvas-horizontal-width: 400px !default;
-$offcanvas-vertical-height: 30vh !default;
+$offcanvas-vertical-height: 100vh !default; // 自訂
+// $offcanvas-vertical-height: 30vh !default;
 $offcanvas-transition-duration: 0.3s !default;
 $offcanvas-border-color: $modal-content-border-color !default;
 $offcanvas-border-width: $modal-content-border-width !default;
