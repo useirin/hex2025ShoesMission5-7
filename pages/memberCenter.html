@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <%- include('./layout/headerMember'); -%>
@@ -334,7 +335,10 @@
 
                 <!-- 紀錄卡片 -->
                 <div class="d-flex gap-6 mb-6 mb-lg-12">
-                  <div class="card d-none d-lg-block w-100">
+                  <div
+                    class="card d-none d-lg-block w-100"
+                    data-aos="fade-down"
+                  >
                     <div class="card-body text-center">
                       <h3 class="fs-t4 text-primary pt-6 mb-2">3</h3>
                       <p class="fs-bm text-natural-50">已完成諮詢</p>
@@ -1744,7 +1748,7 @@
     </main>
 
     <%- include('./layout/footer'); -%>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="module" src="../main.js"></script>
   </body>
 </html>
