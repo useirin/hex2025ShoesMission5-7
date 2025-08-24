@@ -1,0 +1,49 @@
+// 行動版表格樣式
+.table--md-only {
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+  th,
+  td {
+    padding-top: 11.5px;
+    padding-bottom: 11.5px;
+  }
+
+  .table__cell {
+    &--nested {
+      padding: 0;
+
+      td {
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+    }
+
+    &--title {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+// 消除表格內標題預設樣式
+td {
+  h4 {
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
+}
+
+// 調整表格欄寬
+.table__col--w-auto {
+  width: auto;
+}
+.table__col--w-1 {
+  width: 1px;
+}
+td,
+th {
+  white-space: nowrap;
+}

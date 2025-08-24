@@ -479,8 +479,6 @@ $gradient: linear-gradient(
 $spacer: 1rem !default;
 $spacers: (
   // 自訂間距 - start
-  1: $spacer * 0.25,
-  2: $spacer * 0.5,
   3: $spacer * 0.75,
   4: $spacer * 1,
   5: $spacer * 1.25,
@@ -492,9 +490,9 @@ $spacers: (
   18: $spacer * 4.5,
   20: $spacer * 5,
   // 自訂間距 - end
-  // 0: 0,
-  // 1: $spacer * .25,
-  // 2: $spacer * .5,
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
   // 3: $spacer,
   // 4: $spacer * 1.5,
   // 5: $spacer * 3,
@@ -692,7 +690,7 @@ $aspect-ratios: (
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
 
-$font-family-sans-serif: Inter, "Noto Sans", system-ui, -apple-system,
+$font-family-sans-serif: Inter, "Noto Sans TC", system-ui, -apple-system,
   "Segoe UI", Roboto, "Helvetica Neue", "Liberation Sans", Arial, sans-serif,
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 // 自訂中英文字體
@@ -837,8 +835,10 @@ $mark-bg: $yellow-100 !default;
 // Customizes the `.table` component with basic values, each used across all table variations.
 
 // scss-docs-start table-variables
-$table-cell-padding-y: 0.5rem !default;
-$table-cell-padding-x: 0.5rem !default;
+$table-cell-padding-y: 1rem; // 自訂
+$table-cell-padding-x: 0.75rem; // 自訂
+// $table-cell-padding-y: 0.5rem !default;
+// $table-cell-padding-x: 0.5rem !default;
 $table-cell-padding-y-sm: 0.25rem !default;
 $table-cell-padding-x-sm: 0.25rem !default;
 
@@ -848,14 +848,16 @@ $table-color: var(--#{$prefix}emphasis-color) !default;
 $table-bg: var(--#{$prefix}body-bg) !default;
 $table-accent-bg: transparent !default;
 
-$table-th-font-weight: null !default;
+$table-th-font-weight: $font-weight-medium; // 自訂
+// $table-th-font-weight: null !default;
 
 $table-striped-color: $table-color !default;
 $table-striped-bg-factor: 0.05 !default;
-$table-striped-bg: rgba(
-  var(--#{$prefix}emphasis-color-rgb),
-  $table-striped-bg-factor
-) !default;
+$table-striped-bg: $natural-90;
+// $table-striped-bg: rgba(
+//   var(--#{$prefix}emphasis-color-rgb),
+//   $table-striped-bg-factor
+// ) !default;
 
 $table-active-color: $table-color !default;
 $table-active-bg-factor: 0.1 !default;
@@ -866,16 +868,18 @@ $table-active-bg: rgba(
 
 $table-hover-color: $table-color !default;
 $table-hover-bg-factor: 0.075 !default;
-$table-hover-bg: rgba(
-  var(--#{$prefix}emphasis-color-rgb),
-  $table-hover-bg-factor
-) !default;
+$table-hover-bg: $primary-90;
+// $table-hover-bg: rgba(
+//   var(--#{$prefix}emphasis-color-rgb),
+//   $table-hover-bg-factor
+// ) !default;
 
 $table-border-factor: 0.2 !default;
 $table-border-width: var(--#{$prefix}border-width) !default;
 $table-border-color: var(--#{$prefix}border-color) !default;
 
-$table-striped-order: odd !default;
+$table-striped-order: even; // 自訂，偶數行
+// $table-striped-order: odd !default;
 $table-striped-columns-order: even !default;
 
 $table-group-separator-color: currentcolor !default;
@@ -941,9 +945,12 @@ $btn-font-size: $input-btn-font-size !default;
 $btn-line-height: $input-btn-line-height !default;
 $btn-white-space: null !default; // Set to `nowrap` to prevent text wrapping
 
-$btn-padding-y-sm: $input-btn-padding-y-sm !default;
-$btn-padding-x-sm: $input-btn-padding-x-sm !default;
-$btn-font-size-sm: $input-btn-font-size-sm !default;
+$btn-padding-y-sm: 0.75rem; // 自訂
+$btn-padding-x-sm: 0.75rem; // 自訂
+$btn-font-size-sm: $input-btn-font-size; // 自訂
+// $btn-padding-y-sm: $input-btn-padding-y-sm !default;
+// $btn-padding-x-sm: $input-btn-padding-x-sm !default;
+// $btn-font-size-sm: $input-btn-font-size-sm !default;
 
 $btn-padding-y-lg: $input-btn-padding-y-lg !default;
 $btn-padding-x-lg: $input-btn-padding-x-lg !default;
@@ -967,8 +974,9 @@ $btn-link-focus-shadow-rgb: to-rgb(
 
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius: 1rem; // 自訂
+$btn-border-radius-sm: 0.75rem; // 自訂
 // $btn-border-radius: var(--#{$prefix}border-radius) !default;
-$btn-border-radius-sm: var(--#{$prefix}border-radius-sm) !default;
+// $btn-border-radius-sm: var(--#{$prefix}border-radius-sm) !default;
 $btn-border-radius-lg: var(--#{$prefix}border-radius-lg) !default;
 
 $btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
@@ -1675,19 +1683,23 @@ $toast-header-border-color: $toast-border-color !default;
 // Badges
 
 // scss-docs-start badge-variables
-$badge-font-size: 0.875em !default; // 自訂
+$badge-font-size: 0.875em; // 自訂
 // $badge-font-size: 0.75em !default;
-$badge-font-weight: $font-weight-bold !default;
+$badge-font-weight: $font-weight-bold; // 自訂
+$badge-font-weight: $font-weight-medium !default;
 $badge-color: $white !default;
-$badge-padding-y: 0.35em !default;
-$badge-padding-x: 0.65em !default;
+$badge-padding-y: 0.22em; // 自訂
+$badge-padding-x: 0.5em; // 自訂
+// $badge-padding-y: 0.35em !default;
+// $badge-padding-x: 0.65em !default;
 $badge-border-radius: var(--#{$prefix}border-radius) !default;
 // scss-docs-end badge-variables
 
 // Modals
 
 // scss-docs-start modal-variables
-$modal-inner-padding: $spacer !default;
+$modal-inner-padding: $spacer * 1.5; // 自訂
+// $modal-inner-padding: $spacer !default;
 
 $modal-footer-margin-between: 0.5rem !default;
 
@@ -1714,7 +1726,8 @@ $modal-backdrop-opacity: 0.5 !default;
 $modal-header-border-color: var(--#{$prefix}border-color) !default;
 $modal-header-border-width: $modal-content-border-width !default;
 $modal-header-padding-y: $modal-inner-padding !default;
-$modal-header-padding-x: $modal-inner-padding !default;
+$modal-header-padding-x: 1.125rem; // 自訂
+// $modal-header-padding-x: $modal-inner-padding !default;
 $modal-header-padding: $modal-header-padding-y $modal-header-padding-x !default; // Keep this for backwards compatibility
 
 $modal-footer-bg: null !default;

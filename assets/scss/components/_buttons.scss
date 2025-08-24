@@ -20,3 +20,36 @@
     --bs-btn-hover-border-color: transparent;
   }
 }
+
+// 小按鈕 RWD
+.btn-sm {
+  @include media-breakpoint-up(lg) {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    border-radius: 1rem;
+  }
+}
+
+// 排序按鈕 RWD
+.table-filter {
+  &__sort-btn {
+    @include media-breakpoint-down(lg) {
+      padding: 10px;
+      border: transparent;
+    }
+  }
+
+  &__text {
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+      display: inline;
+    }
+  }
+
+  .material-symbols-outlined {
+    @include media-breakpoint-up(lg) {
+      margin-left: 1rem;
+    }
+  }
+}
