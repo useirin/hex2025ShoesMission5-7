@@ -142,6 +142,7 @@
                             name="sex"
                             id="female"
                             value="女性"
+                            checked
                           />
                           <label class="form-check-label" for="female"
                             >女性</label
@@ -211,7 +212,7 @@
                         aria-labelledby="changePasswordLabel"
                         aria-hidden="true"
                       >
-                        <div class="modal-dialog">
+                        <div class="modal-dialog modal-dialog-centered">
                           <div class="modal-content">
                             <div class="modal-header">
                               <h5
@@ -229,7 +230,7 @@
                             </div>
 
                             <div class="modal-body">
-                              <form class="form-floating mb-6">
+                              <div class="form-floating mb-6">
                                 <input
                                   type="password"
                                   class="form-control"
@@ -237,9 +238,9 @@
                                   placeholder="新密碼"
                                 />
                                 <label for="passwordNew">新密碼</label>
-                              </form>
+                              </div>
 
-                              <form class="form-floating">
+                              <div class="form-floating">
                                 <input
                                   type="password"
                                   class="form-control"
@@ -247,7 +248,7 @@
                                   placeholder="再次密碼"
                                 />
                                 <label for="passwordAgain">再次密碼</label>
-                              </form>
+                              </div>
                             </div>
                             <div class="modal-footer py-3 px-5">
                               <button type="button" class="btn btn-dark">
